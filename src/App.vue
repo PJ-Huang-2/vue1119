@@ -3,7 +3,9 @@
     Header
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/news">News</router-link> |
+      <router-link to="/product">Product</router-link> |
     </nav>
 
   </header>
@@ -36,7 +38,7 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color:antiquewhite;
 
     &.router-link-exact-active {
       color: #42b983;

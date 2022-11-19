@@ -1,8 +1,14 @@
-<template>
-  <div class="hello">
-    <div class="img">
-      <img src="https://picsum.photos/300/200/?random=10">
+<template> 
+<div class="bg" :style="{
+    	backgroundImage: `url( ${ require('@/assets/bc/background3.jpg') } )`
+    }"></div>
+  <div class="hello"
+  >
+    <div class="img" v-for="item in 3" :key="item">
+      <img alt="" :src="require(`@/assets/avatar/img-kaiso0${item}.jpg`)">
     </div>
+   
+    
     <div class="item">
       <h1>{{ title }}</h1>
       <h1>{{ msg }}</h1>
@@ -17,7 +23,8 @@ export default {
   name: 'HelloWorld',
   props: {
     title: String,
-    msg: String
+    msg: String,
+    type: String
   }
 }
 </script>
@@ -31,9 +38,19 @@ export default {
 
 
 .img {
-  width: 5rem;
-  height: 5rem;
+  width: 30rem;
+  height: 30rem;
   background-color: #ddd;
+}
+.img img {
+  width: 100%;
+}
+.bg {
+  width: 100%;
+  height: 100vh;
+}
+.wide {
+  width: 30vw;
 }
 h3 {
   margin: 40px 0 0;
